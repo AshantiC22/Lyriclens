@@ -1,8 +1,8 @@
 function App()
 {
   return(
-    <div>
-      <h1>Lyriclens</h1>
+    <div className = "flex items-center justify-center min-h-screen bg-black">
+      <h1 className="text-4xl font-bold text-red-500">Lyriclens</h1>
     </div>
   )
 }
