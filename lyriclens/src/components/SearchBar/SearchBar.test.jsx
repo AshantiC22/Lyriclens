@@ -8,3 +8,11 @@ describe("SearchBar", () => {
     expect(input).toBeInTheDocument();
   });
 });
+
+describe("SearchBar", () => {
+  test("renders a artist search input", () => {
+    render(<SearchBar onSearch={() => {}} />);
+    const input = screen.getByPlaceholderText("Enter artist name...");
+    expect(input).toBeInTheDocument();
+  });
+});
