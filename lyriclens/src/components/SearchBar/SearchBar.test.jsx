@@ -7,10 +7,8 @@ describe("SearchBar", () => {
     const input = screen.getByPlaceholderText("Enter song name...");
     expect(input).toBeInTheDocument();
   });
-});
 
-describe("SearchBar", () => {
-  test("renders a artist search input", () => {
+  test("renders an artist input", () => {
     render(<SearchBar onSearch={() => {}} />);
     const input = screen.getByPlaceholderText("Enter artist name...");
     expect(input).toBeInTheDocument();
