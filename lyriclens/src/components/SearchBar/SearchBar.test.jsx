@@ -13,7 +13,7 @@ describe("SearchBar", () => {
     const input = screen.getByPlaceholderText("Enter artist name...");
     expect(input).toBeInTheDocument();
   });
-  test("toggles a search button", () => {
+  test("renders a search button", () => {
     render(<SearchBar onSearch={() => {}} />);
     const button = screen.getByRole("button");
     expect(button).toBeInTheDocument();

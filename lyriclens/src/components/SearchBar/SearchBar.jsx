@@ -3,6 +3,7 @@ function SearchBar({ onSearch }) {
     <div>
       <input placeholder="Enter song name..." />
       <input placeholder="Enter artist name..." />
+      <button onClick={onSearch}>Search</button>
     </div>
   );
 }
