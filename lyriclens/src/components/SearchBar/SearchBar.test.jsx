@@ -32,4 +32,16 @@ describe("SearchBar", () => {
     await userEvent.click(button);
     expect(mockSearch).toHaveBeenCalled();
   });
+  test("clears inputs after submission", async () => {
+    const mockSearch = jest.fn();
+    render(<SearchBar onSearch={mockSearch} />);
+    const songInput = screen.getByPlaceholderText("Enter song name...");
+    const artistInput = screen.getByPlaceholderText("Enter artist name...");
+    const button = screen.getByRole("button");
+    await userEvent.type(songInput, "God Plan");
+    await userEvent.type(artistInput, "Drake");
+    await userEvent.click(button);
+    expect(songInput.value).toBe("");
+    expect(artistInput.value).toBe("");
+  });
 });
