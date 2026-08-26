@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function SearchBar({ onSearch }) {
+function SearchBar({ onSearch, isLoading }) {
   const [song, setSong] = useState("");
   const [artist, setArtist] = useState("");
 
@@ -22,7 +22,7 @@ function SearchBar({ onSearch }) {
         onChange={(e) => setArtist(e.target.value)}
         placeholder="Enter artist name..."
       />
-      <button onClick={handleSubmit}>Search</button>
+      <button onClick={handleSubmit} disabled={isLoading}>Search</button>
     </div>
   );
 }

@@ -44,4 +44,9 @@ describe("SearchBar", () => {
     expect(songInput.value).toBe("");
     expect(artistInput.value).toBe("");
   });
+  test('disables button while loading', () => {
+  render(<SearchBar onSearch={() => {}} isLoading={true} />)
+  const button = screen.getByRole('button')
+  expect(button).toBeDisabled()
+})
 });
